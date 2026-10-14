@@ -33,7 +33,7 @@ function createUnityInstance(t, n, l) {
             preserveDrawingBuffer: !1,
             powerPreference: 2
         },
-        wasmFileSize: 82574276,
+        wasmFileSize: 82574275,
         cacheControl: function(e) {
             return e == b.dataUrl || e.match(/\.bundle/) ? "must-revalidate" : "no-store"
         },
@@ -69,7 +69,7 @@ function createUnityInstance(t, n, l) {
     e(n, "productVersion", "1.0"),
     n)
         b[o] = n[o];
-    b.streamingAssetsUrl = new URL("StreamingAssets",document.querySelector('base').href).href;
+    b.streamingAssetsUrl = new URL(b.streamingAssetsUrl, document.baseURI).href;
     var a = b.disabledCanvasEvents.slice();
     function i(e) {
         e.preventDefault()
@@ -286,7 +286,7 @@ function createUnityInstance(t, n, l) {
     }
     ,
     Error.stackTraceLimit = Math.max(Error.stackTraceLimit || 0, 50),
-    b.readBodyWithProgress = function(a, i, s) {
+    b.readBodyWithProgress = n.readBodyWithProgress || function(a, i, s) {
         var e = a.body ? a.body.getReader() : void 0
           , l = void 0 !== a.headers.get("Content-Length")
           , c = function(e, t) {
@@ -2107,7 +2107,8 @@ function createUnityInstance(t, n, l) {
                 } catch (e) {}
             },
             hasUnityMarker: function(e) {
-                return true
+                // Do not inflate bytes that the browser/native stream already decoded.
+                return e.length >= 3 && e[0] === 0x1f && e[1] === 0x8b && e[2] === 8;
             }
         },
         br: {
