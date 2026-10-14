@@ -1,253 +1,52 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <base href="https://cdn.jsdelivr.net/gh/web-ports/hollow-knight-silksong@master/">
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | Hollow Knight SilkSong</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body>
-    <div id="loading-text" style="color: white; font-size: 48px; font-family: cursive; text-align: center; margin-top: 20px;"> LOADING...</div>
-    <div id="unity-container">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-warning"> </div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#151419">
+  <title>Silksong · iPad player</title>
+  <link rel="icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+</head>
+<body>
+  <main id="player">
+    <canvas id="unity-canvas" width="960" height="600" tabindex="0" aria-label="Silksong game"></canvas>
+    <section id="start-panel" class="panel">
+      <p class="eyebrow">LOW-MEMORY WEB PLAYER</p>
+      <h1>Hollow Knight<br>Silksong</h1>
+      <p>Assets load as needed. Cinematics are replaced with one-second black clips.</p>
+      <label>Rendering resolution
+        <select id="resolution"><option value="960">960 × 600 · recommended for iPad</option><option value="1280">1280 × 800 · sharper</option></select>
+      </label>
+      <label class="check"><input type="checkbox" id="touch-enabled"> Show touch controls</label>
+      <p class="hint">A controller or keyboard is recommended. Touch buttons emulate keys; match them to the game's bindings using Controls.</p>
+      <button id="start-button" class="primary">Start game</button>
+      <p class="hint">Keep this tab open while loading. Large areas can still take time. This build is not certified crash-free on iPad.</p>
+    </section>
+    <section id="loading-panel" class="panel" hidden aria-live="polite">
+      <h2>Loading Silksong</h2><p id="loading-text">Preparing player…</p>
+      <progress id="progress" max="1" value="0"></progress>
+      <p class="hint">Only requested bundles are downloaded, one at a time.</p>
+    </section>
+    <div id="warning" role="alert" hidden></div>
+    <nav id="toolbar" hidden aria-label="Player options">
+      <button id="controls-button">Controls</button><button id="diagnostics-button">Stats</button>
+      <span id="asset-status" aria-live="polite"></span>
+    </nav>
+    <section id="controls-panel" class="panel" hidden>
+      <h2>Touch controls</h2>
+      <p class="hint">Match these keys to your in-game keyboard settings. Directions use arrow keys. Choose each emulated key below.</p>
+      <div id="bindings"></div>
+      <label class="check"><input type="checkbox" id="touch-toggle"> Show touch buttons</label>
+      <button id="close-controls">Done</button>
+    </section>
+    <output id="diagnostics" hidden></output>
+    <div id="touch-controls" hidden aria-label="Touch gamepad">
+      <div class="dpad"><button data-key="ArrowUp" class="up" aria-label="Up">↑</button><button data-key="ArrowLeft" class="left" aria-label="Left">←</button><button data-key="ArrowDown" class="down" aria-label="Down">↓</button><button data-key="ArrowRight" class="right" aria-label="Right">→</button></div>
+      <div class="actions"><button data-action="heal">Heal</button><button data-action="tool">Tool</button><button data-action="dash">Dash</button><button data-action="attack">Attack</button><button data-action="jump">Jump</button></div>
+      <div class="menu-keys"><button data-key="Escape">Menu</button><button data-key="Enter">Enter</button></div>
     </div>
-    <script src="jszip.js"></script>
-
-<script>
-const loadingText = document.querySelector("#loading-text");
-const CACHE_NAME = "hksilksongcache-v2"; // bump version if needed
-
-/* ================= FETCH OVERRIDE ================= */
-const originalFetch = window.fetch;
-
-window.fetch = async function(resource, options) {
-  let url = typeof resource === "string" ? resource : resource.url;
-  let cleanPath = url.split("/").pop();
-
-  const cache = await caches.open(CACHE_NAME);
-
-  const cachedResponse = await cache.match(cleanPath);
-  if (cachedResponse) {
-    return cachedResponse;
-  }
-
-  return originalFetch(resource, options);
-};
-
-/* ================= CACHE CHECK ================= */
-async function isCached() {
-  const cache = await caches.open(CACHE_NAME);
-  const done = await cache.match("CACHE_COMPLETE");
-  return !!done;
-}
-
-async function cleanupOldCaches() {
-  const cacheNames = await caches.keys();
-
-  await Promise.all(
-    cacheNames.map(name => {
-      if (name !== CACHE_NAME && name.includes("hksilksong")) {
-        console.log("Deleting old cache:", name);
-        return caches.delete(name);
-      }
-    })
-  );
-}
-
-/* ================= UNZIP ================= */
-async function unzipAndStore(zipBlob) {
-  if (!zipBlob) {
-    throw new Error("ZIP is missing");
-  }
-
-  loadingText.textContent = "EXTRACTING ASSETS...";
-
-  const zip = await JSZip.loadAsync(zipBlob);
-  const files = Object.values(zip.files).filter(f => !f.dir);
-  const total = files.length;
-
-  const cache = await caches.open(CACHE_NAME);
-
-  let processed = 0;
-  const batchSize = 10;
-
-  for (let i = 0; i < files.length; i += batchSize) {
-    const batch = files.slice(i, i + batchSize);
-
-    await Promise.all(batch.map(async (file) => {
-      try {
-        const blob = await file.async("blob");
-        await cache.put(file.name, new Response(blob));
-      } catch (e) {
-        console.error("Failed:", file.name, e);
-      }
-
-      processed++;
-      loadingText.textContent =
-        `EXTRACTING ASSETS... (${processed}/${total})`;
-    }));
-
-    await new Promise(r => setTimeout(r, 0));
-  }
-
-  // ✅ mark cache complete
-  await cache.put("CACHE_COMPLETE", new Response("ok"));
-
-  console.log("Cache complete");
-}
-
-/* ================= DOWNLOAD ================= */
-let loadedBytes = 0;
-
-async function fetchWithProgress(url) {
-  const response = await originalFetch(url);
-
-  if (!response.ok) {
-    throw new Error("Failed to fetch: " + url);
-  }
-
-  const reader = response.body.getReader();
-  let chunks = [];
-  let received = 0;
-
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
-
-    received += value.length;
-    loadedBytes += value.length;
-    chunks.push(value);
-
-    let mbDone = (loadedBytes / (1024 * 1024)).toFixed(2);
-    let mbTotal = '1986.64';
-
-    loadingText.textContent =
-      `DOWNLOADING ASSETS... (${mbDone} MB / ${mbTotal} MB)`;
-  }
-
-  let fullBuffer = new Uint8Array(received);
-  let offset = 0;
-
-  for (let chunk of chunks) {
-    fullBuffer.set(chunk, offset);
-    offset += chunk.length;
-  }
-
-  return fullBuffer.buffer;
-}
-
-/* ================= MERGE ================= */
-async function mergeFiles(parts) {
-  console.log("Downloading parts:", parts.length);
-
-  const buffers = await Promise.all(
-    parts.map(part => fetchWithProgress(part))
-  );
-
-  return new Blob(buffers);
-}
-
-/* ================= UTIL ================= */
-function getParts(file, start, end) {
-  let parts = [];
-  for (let i = start; i <= end; i++) {
-    parts.push(file + ".part" + i);
-  }
-  return parts;
-}
-
-/* ================= MAIN ================= */
-(async () => {
-  try {
-    await cleanupOldCaches(); 
-    if (!(await isCached())) {
-      loadingText.textContent = "DOWNLOADING ASSETS...";
-
-      const webglzip = await mergeFiles(
-        getParts("StreamingAssets/aa/WebGL.zip", 1, 100)
-      );
-
-      await unzipAndStore(webglzip);
-    } else {
-      loadingText.textContent = "LOADING FROM CACHE...";
-    }
-
-    /* ================= UNITY START ================= */
-    const canvas = document.querySelector("#unity-canvas");
-    const loadingBar = document.querySelector("#unity-loading-bar");
-    const progressBarFull = document.querySelector("#unity-progress-bar-full");
-    const warningBanner = document.querySelector("#unity-warning");
-
-    function unityShowBanner(msg, type) {
-      function update() {
-        warningBanner.style.display =
-          warningBanner.children.length ? 'block' : 'none';
-      }
-
-      let div = document.createElement('div');
-      div.innerHTML = msg;
-      warningBanner.appendChild(div);
-
-      if (type == 'error') {
-        div.style = 'background:red;padding:10px;';
-      } else {
-        if (type == 'warning') {
-          div.style = 'background:yellow;padding:10px;';
-        }
-        setTimeout(() => {
-          warningBanner.removeChild(div);
-          update();
-        }, 5000);
-      }
-
-      update();
-    }
-
-    const buildUrl = "Build";
-
-    const config = {
-      dataUrl: buildUrl + "/w-pt.data.unityweb",
-      frameworkUrl: buildUrl + "/w-pt.framework.js.unityweb",
-      codeUrl: buildUrl + "/w-pt.wasm.unityweb",
-      streamingAssetsUrl: "StreamingAssets",
-      companyName: "EDUrocks Group, Truffled, GN-Math",
-      productName: "Hollow Knight SilkSong",
-      productVersion: "1.0",
-      showBanner: unityShowBanner,
-    };
-
-    loadingBar.style.display = "block";
-
-    const script = document.createElement("script");
-    script.src = "https://cdn.jsdelivr.net/gh/web-ports/hollow-knight-silksong@latest/Build/w-pt.loader.js";
-
-    script.onload = () => {
-      createUnityInstance(canvas, config, (progress) => {
-        progressBarFull.style.width = (progress * 100) + "%";
-      })
-      .then(() => {
-        loadingBar.remove();
-        loadingText.remove();
-      })
-      .catch(alert);
-    };
-
-    document.body.appendChild(script);
-
-  } catch (err) {
-    console.error(err);
-    loadingText.textContent = "ERROR: " + err.message;
-  }
-})();
-</script>
-  </body>
+  </main>
+  <script type="module" src="web/player.js"></script>
+</body>
 </html>

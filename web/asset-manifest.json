@@ -1,0 +1,641 @@
+{
+  "version": "ipad-v1",
+  "parts": [
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part1",
+      "offset": 0,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part2",
+      "offset": 20866662,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part3",
+      "offset": 41733324,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part4",
+      "offset": 62599986,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part5",
+      "offset": 83466648,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part6",
+      "offset": 104333310,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part7",
+      "offset": 125199972,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part8",
+      "offset": 146066634,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part9",
+      "offset": 166933296,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part10",
+      "offset": 187799958,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part11",
+      "offset": 208666620,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part12",
+      "offset": 229533282,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part13",
+      "offset": 250399944,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part14",
+      "offset": 271266606,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part15",
+      "offset": 292133268,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part16",
+      "offset": 312999930,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part17",
+      "offset": 333866592,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part18",
+      "offset": 354733254,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part19",
+      "offset": 375599916,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part20",
+      "offset": 396466578,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part21",
+      "offset": 417333240,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part22",
+      "offset": 438199902,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part23",
+      "offset": 459066564,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part24",
+      "offset": 479933226,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part25",
+      "offset": 500799888,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part26",
+      "offset": 521666550,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part27",
+      "offset": 542533212,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part28",
+      "offset": 563399874,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part29",
+      "offset": 584266536,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part30",
+      "offset": 605133198,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part31",
+      "offset": 625999860,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part32",
+      "offset": 646866522,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part33",
+      "offset": 667733184,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part34",
+      "offset": 688599846,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part35",
+      "offset": 709466508,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part36",
+      "offset": 730333170,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part37",
+      "offset": 751199832,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part38",
+      "offset": 772066494,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part39",
+      "offset": 792933156,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part40",
+      "offset": 813799818,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part41",
+      "offset": 834666480,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part42",
+      "offset": 855533142,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part43",
+      "offset": 876399804,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part44",
+      "offset": 897266466,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part45",
+      "offset": 918133128,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part46",
+      "offset": 938999790,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part47",
+      "offset": 959866452,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part48",
+      "offset": 980733114,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part49",
+      "offset": 1001599776,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part50",
+      "offset": 1022466438,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part51",
+      "offset": 1043333100,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part52",
+      "offset": 1064199762,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part53",
+      "offset": 1085066424,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part54",
+      "offset": 1105933086,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part55",
+      "offset": 1126799748,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part56",
+      "offset": 1147666410,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part57",
+      "offset": 1168533072,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part58",
+      "offset": 1189399734,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part59",
+      "offset": 1210266396,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part60",
+      "offset": 1231133058,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part61",
+      "offset": 1251999720,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part62",
+      "offset": 1272866382,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part63",
+      "offset": 1293733044,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part64",
+      "offset": 1314599706,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part65",
+      "offset": 1335466368,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part66",
+      "offset": 1356333030,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part67",
+      "offset": 1377199692,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part68",
+      "offset": 1398066354,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part69",
+      "offset": 1418933016,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part70",
+      "offset": 1439799678,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part71",
+      "offset": 1460666340,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part72",
+      "offset": 1481533002,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part73",
+      "offset": 1502399664,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part74",
+      "offset": 1523266326,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part75",
+      "offset": 1544132988,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part76",
+      "offset": 1564999650,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part77",
+      "offset": 1585866312,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part78",
+      "offset": 1606732974,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part79",
+      "offset": 1627599636,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part80",
+      "offset": 1648466298,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part81",
+      "offset": 1669332960,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part82",
+      "offset": 1690199622,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part83",
+      "offset": 1711066284,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part84",
+      "offset": 1731932946,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part85",
+      "offset": 1752799608,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part86",
+      "offset": 1773666270,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part87",
+      "offset": 1794532932,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part88",
+      "offset": 1815399594,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part89",
+      "offset": 1836266256,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part90",
+      "offset": 1857132918,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part91",
+      "offset": 1877999580,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part92",
+      "offset": 1898866242,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part93",
+      "offset": 1919732904,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part94",
+      "offset": 1940599566,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part95",
+      "offset": 1961466228,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part96",
+      "offset": 1982332890,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part97",
+      "offset": 2003199552,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part98",
+      "offset": 2024066214,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part99",
+      "offset": 2044932876,
+      "size": 20866662
+    },
+    {
+      "path": "StreamingAssets/aa/WebGL.zip.part100",
+      "offset": 2065799538,
+      "size": 17340100
+    }
+  ],
+  "entries": {
+    "packed-audio-voices_assets_all_4e4d5ad29d42bd4abdd5eadfce410be2.bundle": {
+      "offset": 100,
+      "compressedSize": 23888339,
+      "size": 23923429,
+      "crc32": 395627096
+    },
+    "packed-sprites-effects_assets_all_2e7bed7c909427b371b79d647bf138ee.bundle": {
+      "offset": 23888542,
+      "compressedSize": 21077768,
+      "size": 23619876,
+      "crc32": 3353971993
+    },
+    "packed-scenes-hornet_scenes_all_c907e217c56bc36e9412cc713b6511b0.bundle": {
+      "offset": 44966411,
+      "compressedSize": 343949358,
+      "size": 504314372,
+      "crc32": 1399120506
+    },
+    "packed-collections_assets_all_40fc2899a4bf13e2fdf4877fac117bfe.bundle": {
+      "offset": 388915868,
+      "compressedSize": 305936266,
+      "size": 349892025,
+      "crc32": 2383054772
+    },
+    "packed-sprites-scenery_assets_all_39cc8fd6577083e676edf1e1a61fcaa9.bundle": {
+      "offset": 922151162,
+      "compressedSize": 177302834,
+      "size": 200750305,
+      "crc32": 652599549
+    },
+    "packed-audio-hornetmusic_assets_all_d7258aa531c7adbb862ab1f75c0a4758.bundle": {
+      "offset": 1099454101,
+      "compressedSize": 182954452,
+      "size": 183736066,
+      "crc32": 3077065663
+    },
+    "packed-prefabs_assets_all_b19c0cf6b825f4cf18264a6c8f5765a6.bundle": {
+      "offset": 1282408648,
+      "compressedSize": 131206876,
+      "size": 147105252,
+      "crc32": 2130545914
+    },
+    "packed-animations-props_assets_all_4d32c5a2554f1011290a2a758b19c15d.bundle": {
+      "offset": 1413615628,
+      "compressedSize": 112582650,
+      "size": 126271488,
+      "crc32": 3979172519
+    },
+    "packed-sprites-ui_assets_all_f9a8ef56ecdd0a4b95785438aefb0b1a.bundle": {
+      "offset": 1526198376,
+      "compressedSize": 15721649,
+      "size": 117783892,
+      "crc32": 30714392
+    },
+    "packed-audio-hornetvoices_assets_all_6253ed781850c4087eb825002e1b63a0.bundle": {
+      "offset": 1541920131,
+      "compressedSize": 113615744,
+      "size": 113773103,
+      "crc32": 3813222418
+    },
+    "packed-audio-sfx_assets_all_64a9c47145f1a68e9023751b5a4c32dd.bundle": {
+      "offset": 1655535972,
+      "compressedSize": 99941006,
+      "size": 100095084,
+      "crc32": 4269184320
+    },
+    "packed-animations-hornet_assets_all_df96eceebcc563fac0a4c4d756348ec8.bundle": {
+      "offset": 1755477083,
+      "compressedSize": 79998592,
+      "size": 89583978,
+      "crc32": 1576282379
+    },
+    "packed-fonts_assets_all_80af17da7b187150e3e4ec5346115b67.bundle": {
+      "offset": 1835475768,
+      "compressedSize": 48966670,
+      "size": 53402313,
+      "crc32": 25392132
+    },
+    "packed-sprites-hero_assets_all_038a432da5e4c2c15b9327d215fd7f32.bundle": {
+      "offset": 1884442538,
+      "compressedSize": 35649394,
+      "size": 40027523,
+      "crc32": 214146516
+    },
+    "packed-sprites-hornet_bosses_assets_all_4e40e4fa5157ac9fa9cbb2b12d9205fd.bundle": {
+      "offset": 1920092041,
+      "compressedSize": 34114295,
+      "size": 39051317,
+      "crc32": 4240456881
+    },
+    "packed-animations-hornetnpcs_assets_all_b07b6c9740de43a1fa7c0ceef545d3a9.bundle": {
+      "offset": 1954206445,
+      "compressedSize": 29090015,
+      "size": 32653598,
+      "crc32": 1047705224
+    },
+    "packed-animations-hornetenemies_assets_all_9f3d5906ad5a54b6c762e508aea802c3.bundle": {
+      "offset": 1983296572,
+      "compressedSize": 29055449,
+      "size": 32488514,
+      "crc32": 4269566431
+    },
+    "packed-animations-effects_assets_all_9aab0f3b6b8f8c05cd2d618598948eea.bundle": {
+      "offset": 2012352127,
+      "compressedSize": 26832441,
+      "size": 30037913,
+      "crc32": 3741813079
+    },
+    "packed-sprites-hornet_enemies_assets_all_1dc5e3e9aee3b4d2599cfacc771aa715.bundle": {
+      "offset": 2039184678,
+      "compressedSize": 22382755,
+      "size": 25741201,
+      "crc32": 2487397380
+    },
+    "packed-animations-cutscene_assets_all_6088ab681e63b034a1b602249209347d.bundle": {
+      "offset": 2061567540,
+      "compressedSize": 21568824,
+      "size": 24006915,
+      "crc32": 1263938058
+    }
+  },
+  "overrides": [
+    "packed-cinematics_assets_all_5ec2ac5cfb98b69438cb91f6e253bbbc.bundle"
+  ],
+  "builds": {
+    "Build/w-pt.data.unityweb": {
+      "size": 46968628
+    },
+    "Build/w-pt.framework.js.unityweb": {
+      "size": 631969
+    },
+    "Build/w-pt.wasm.unityweb": {
+      "size": 82574275
+    }
+  }
+}
